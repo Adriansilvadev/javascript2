@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formatação de Strings</title>
+    <style>
+        body {
+            background-color: rgb(11, 149, 149);
+           
+        }
+
+        h1 {
+            color: rgb(6, 88, 6);
+            text-align: center  ;
+        }
+        p{
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <nav>
+            <ul>
+                <li><a href="../aula04/ex001.html">Ínicio</a></li>
+                <li><a href="../aula06/ex002.html" target="_self" rel="next">Página 2</a></li>
+                <li><a href="ex003.html" target="_self" rel="next">Página 3</a></li>
+                <li><a href="../aula06/ex004.html">Página4</a></li>
+            </ul>
+        </nav>
+    </head>
+
+    <h1>Formatação de Strings</h1>
+    <p>
+        Nesta página consideraremos a formatação de strings, que é o processo de manipulação da aparência de uma string para atender a determinados requisitos de apresentação. Em JavaScript, existem várias maneiras de formatar strings, permitindo a incorporação de variáveis, controle de espaçamento, e a definição de estilos específicos. Aqui estão algumas abordagens comuns:   
+        <h2>Concatenação de Strings:</h2>     
+    <p>
+        Esta é uma forma básica de formatar strings usando o operador de concatenação (+). Foi esse o método usado nos exemplos da página anterior. No entanto, pode se tornar menos legível com strings longas. Por isso de mmodo geral podemos optar por usar ou método, o <strong>Template Strings</strong> </p>
+
+        <h2>Template Strings</h2>
+
+        <p>
+            As <strong>template strings</strong> são delimitadas por crases <strong>( ` ` )</strong> e permitem a incorporação de variáveis diretamente na string usando<strong> ${ }</strong>. Isso torna o código mais legível e flexível. Aproveitamos o exemplo da página anterior para demonstrar o uso de Template Strings. Veja abaixo como ficou o código.
+
+        </p>
+        <p>
+            <pre>
+                var n1 = Number(window.prompt('Digite um número:'))
+                var n2 = Number(window.prompt('Digite outro número:'))
+                var s = n1 + n2
+                window.alert(`A soma entre ${n1} e ${ n2}  é igual a ${s} ` )
+            </pre>
+        </p>
+        <p>Note como essa técnica torna mais facil a construção e a legibilidade do comando <strong>windo.alert </strong></p>
+       
+        <p>Consulte o código fonte para uma melhor análise dos códigos desta página. </p>   
+    
+<script>
+        var n1 = Number(window.prompt('Digite um número:'))
+        var n2 = Number(window.prompt('Digite outro número:'))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${ n2}  é igual a ${s} `)
+   
+</script>
+</body>
+</html>

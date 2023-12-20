@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tratamento de Dados</title>
+    <style>
+        body {
+            background-color: rgb(11, 149, 149);
+           
+        }
+
+        h1 {
+            color: rgb(6, 88, 6);
+            text-align: center  ;
+        }
+        p{
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <nav>
+            <ul>
+                <li><a href="../aula04/ex001.html">Ínicio</a></li>
+                <li><a href="../aula06/ex002.html" target="_self" rel="next">Página 2</a></li>
+                <li><a href="ex003.html" target="_self" rel="next">Página 3</a></li>
+                <li><a href="../aula06/ex004.html"></a>Página4</li>
+            </ul>
+        </nav>
+    </head>
+
+    <h1>Tratamento de Dados</h1>
+    <p>
+        Nesta página vimos o tratamento de dados numéricos. Usando parte dos comando da página anterior, fizemos algumas alteraçòes para obter 2 números do usuário com o objetivo de fazer a soma deles.
+        </p>
+        <p>
+        Abaixo temos o script necessário para isso. Veja que além de definir as 2 variáveis, também fizemos a conversão das 2 variáveis, visto que a linguagem JavaScript entende os valores digitados como sendo strings. Caso não fizessemos a conversão o resultado que apareceria na caixa do window.alert seria apenas uma concatenaçòa de n1 com n2.  </p>
+        <p>
+            <pre>
+                var n1 = Number(window.prompt('Digite um número:'))
+                var n2 = Number(window.prompt('Digite outro número:'))
+                var s = n1 + n2
+                window.alert('A soma dos números digitados é '+ s)
+            </pre>
+        </p>
+        <p>Essa é uma das maneiras de fazer a conversão de string para número, mas há outra maneira que está representada aqui em baixo. Veja que é necessário fazer um ajuste dependendo do tipo de número, se inteiro ( 1, 5,12 etc) ou real (1.2, 2.5 ,3.2 etc). Para inteiro usamos <strong>Number.parseInt</strong>. Para reais (fracionados) usamos <strong>Number.parseFloat</strong>.</p>
+
+        <pre>
+            var n1 = Number.parseInt(window.prompt('Digite um número:'))
+            var n2 = Number.parseInt(window.prompt('Digite outro número:'))
+            var s = n1 + n2
+            window.alert('A soma dos números digitados é '+ s)
+        </pre>
+
+        <pre>
+            var n1 = Number.parseFloat(window.prompt('Digite um número:'))
+            var n2 = Number.parseFloat(window.prompt('Digite outro número:'))
+            var s = n1 + n2
+            window.alert('A soma dos números digitados é '+ s)
+        </pre>
+        <p>
+            Uma observação importante é que embora a conversão automática usando a sintaxe<strong> Number(n*)</strong>, que usamos no primeiro exemplo seja muito prática, ela  não elimina as demais, pois podem haver situações em que o resultado desejado seja para um número inteiro. Neste caso usa-se a sintaxe <strong>Number.parseInt(n*)</strong> . 
+            Já em outras  o resultado desejado pode ser um número real (fracionado) neste caso deve se usar a sintaxe <strong>NumberparseFloat(n*)</strong>.
+        </p>
+        <h2>Conversão de número para string</h2>
+        <p>Podem ocorrer situações em que precisamos fazer uma conversão contraria, de <strong>string para número</strong>. Para isso ha 2 maneiras de fazer a conversão. </p>
+
+        <h3>Strin(n)</h3>
+        <p>O método String() converte explicitamente qualquer valor para uma string.</p>
+        <p>
+            <pre>
+                var n1 = Number(window.prompt('Digite um número:'))
+                var n2 = Number(window.prompt('Digite outro número:'))
+                var s = n1 + n2
+                window.alert('A soma dos números digitados é '+ String(s))
+            </pre>
+        </p>
+
+        <h3>n.toString()</h3>
+        <p>O método toString() é chamado em um valor numérico para convertê-lo em uma string.</p>
+
+        <p>
+            <pre>
+                var n1 = Number(window.prompt('Digite um número:'))
+                var n2 = Number(window.prompt('Digite outro número:'))
+                var s = n1 + n2
+                window.alert('A soma dos números digitados é '+ s.toString())
+            </pre>
+        </p>
+        <p><a href="ex003a.html" target="_self" rel="next">Nesta página </a>adicional vamos ver mai sobre formatação de strings, incluindo o método <strong>Template String</strong></p>
+        <p>          
+            Consulte o código fonte para uma melhor análise dos códigos desta página.
+        </p>
+   
+    
+<script>
+        var n1 = Number(window.prompt('Digite um número:'))
+        var n2 = Number(window.prompt('Digite outro número:'))
+        var s = n1 + n2
+        window.alert('A soma dos números digitados é '+ s)
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+
+    <style>
+        div#res {
+            height: 20px;
+            width:500px;
+            background-color: aquamarine;
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Radar de Velocidade</h1>
+    Velocidade do veículo <input type="number" name="vel" id="cxvel" > Km/h <br>
+    <input type="button" value="verificar" id="botao">
+    <div id="res"></div>
+   
+
+    <script>
+        var cxvel = window.document.getElementById('cxvel')
+        var cxresult = window.document.getElementById('res')        
+        var botao = window.document.getElementById('botao')
+        botao.addEventListener('click',verificar)
+
+        function verificar() {
+            var vel = Number(cxvel.value)
+                cxresult.innerHTML = `Sua velocidade atual é de <strong>${vel}Km/h.</strong>`
+            if (vel > 80) {
+                cxresult.innerHTML += `Você foi MULTADO por excesso de velocidade ! ` 
+                cxresult.innerHTML += 'Dirija  sempre com cinto de segurança.' 
+            } else {
+                cxresult.innerHTML =  `Sua velocidade foi de ${vel}Km/h. Dirija  sempre com cinto de segurança.`
+            }
+        }
+
+      
+       
+    </script>
+   
+</body>
+</html>

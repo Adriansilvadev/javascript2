@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
+    <style>
+       
+    </style>
+</head>
+<body> 
+   <h2> Toque ou clique  nos botões de ligar e desligar </h2>
+    <main> 
+         
+   
+<div id="semaforo">
+        <div id="luz_verde"></div>
+        <div id="luz_amarela"></div>
+        <div id="luz_vermelha"></div>
+</div>
+<div id="painel">
+    <div id="botao_vd">ON</div>
+    <div id="botao_am">ON</div>
+    <div id="botao_vr">ON</div>
+    
+    <div id="botao_vd_off">OFF</div>
+    <div id="botao_am_off">OFF</div>
+    <div id="botao_vr_off">OFF</div>
+</div>
+
+    <script>
+     
+     var luz_verde = window.document.getElementById('luz_verde')
+     var luz_amarela = window.document.getElementById('luz_amarela')
+     var luz_vermelha = window.document.getElementById('luz_vermelha')
+
+     var botao_vd = window.document.getElementById('botao_vd')
+     var botao_am = window.document.getElementById('botao_am')
+     var botao_vr = window.document.getElementById('botao_vr')
+    
+     var botao_vd_off = window.document.getElementById('botao_vd_off')
+     var botao_am_off = window.document.getElementById('botao_am_off')
+     var botao_vr_off = window.document. getElementById('botao_vr_off')
+
+        botao_vd.addEventListener('click', clicar)
+        botao_am.addEventListener('click', clicar2)
+        botao_vr.addEventListener('click', clicar3)
+
+        botao_vd_off.addEventListener('click', clicar4)
+        botao_am_off.addEventListener('click', clicar5)
+        botao_vr_off.addEventListener('click', clicar6)
+        
+        function clicar() {
+            luz_verde.style.backgroundColor = 'green'
+            luz_verde.innerText= 'SIGA'
+        }
+
+        function clicar2() {
+            luz_amarela.style.backgroundColor = 'yellow'
+            luz_amarela.innerText ='ATENÇÃO'
+        }
+        function clicar3() {
+            luz_vermelha.style.backgroundColor ='red'
+            luz_vermelha.innerText ='PARE'
+            luz_vermelha.style.color ='white'
+        }
+
+        function clicar4() {
+            luz_verde.style.backgroundColor = 'gray'
+            luz_verde.innerText= ''
+        }
+        function clicar5() {
+            luz_amarela.style.backgroundColor ='gray'
+            luz_amarela.innerText =''
+        }
+
+        function clicar6() {
+            luz_vermelha.style.backgroundColor ='gray'
+            luz_vermelha.innerText =''
+        }
+      
+    </script>
+   
+    
+</main>
+</body>
+</html>

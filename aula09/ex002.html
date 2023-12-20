@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(130, 202, 178);
+        }
+    </style>
+    <title>Selecionando com DOM</title>
+</head>
+<body>
+    <head>
+        <nav>
+            <ul>
+                <li>
+                    <a href="ex001.html">ínicio</a>
+                </li>
+                <li><a href="#"></a> Página 2</li>
+            </ul>
+        </nav>
+    </head>
+<main>
+    <section>
+        <h1> Selecionando elementos com DOM</h1>
+        <p>Depois de conhcermos a estrutura DOM, podemos selecionar os elementos que queremos manipular. Para isso há 5 maneiras diferentes. São elas: <strong> por Marca,por ID, por Nome, por Classe e por Seletor. Vejamos cada uma dessas e o resultado ontido </strong> </p>
+        <h2>Por marca - "getElementByTagName( )"</h2>
+        <p>Para selecionar todos os elementos de uma determinada tag, usamos o script <strong>getElementsByTagName( )</strong>. Abaixo está o script que criamos para selecionar um elemento pela marca(tag)</p>
+        <p>TEXTO EXEMPLO</p>
+
+        <pre>
+                var p1 =window.document.getElementsByTagName('p')[2]
+               window.document.write( 'Aqui está o texto selecionado >> ' + p1.innerText)
+               p1.style.color = 'blue'
+        </pre>
+
+        <script>
+            var p1 =window.document.getElementsByTagName('p')[2]
+           window.document.write( 'Aqui está o texto selecionado >> ' + p1.innerText)
+           p1.style.color = 'blue' 
+        </script>
+
+        <p>Veja que, para facilitar a selecão e posterior manipulação do elemento, criamos uma variável que chamamos de p1, dai atribuímos o elemento a esta variável. Isso possibilitou inclusive estlizar o elemento deixando-o na cor azul. </p>
+        <p> É também importante se atentar ao fato de que  quandp a seleção e feita por marca (getElementsByTagName) precisamos determinar qual elemento visto que esta seleção incluin todos os elementos de tag similar . Por isso ao final da primeira linha do script depois de determinar qual a tag que estamos selecionando, precisamos definir qual elemento, é o que pode ser visto no colchete no final da primeira linha. Visto que em Javascript a contagem se inicia em zero e o texto exemplo estava na terceira tag de paragráfo o valor na chave foi [2]. </p>
+
+        <h2>Por ID - "getElementById( )"</h2>
+        <p>Se um elemento tem um atributo id exclusivo, você pode selecioná-lo diretamente usando <strong>getElementById</strong>. Isso é eficiente e direto. Para isso precisamos definir um id para o elemento que queremos manipular. Vamos seguir usando o mesmo exemplo porém vamos repeti-lo em outra tag para que não haja conflito de scripts.  Abaixo está o script que criamos para selecionar um elemento pela <strong>Id</strong>.</p> 
+        <p id="t2"><strong>TEXTO EXEMPLO 2</strong></p>
+
+        <pre>
+            var p2 = window.document.getElementById('t2')
+            window.document.write('Aqui está o texto selecionado '+ p2.innerText)
+            t2.style.background = 'green'
+        </pre>
+
+        <script>
+            var p2 = window.document.getElementById('t2')
+            window.document.write('Aqui está o texto selecionado '+ p2.innerText)
+            t2.style.background = 'green'
+        </script>
+        <p>Conforme pode ser visto, neste caso não precismos usar os colchetes [] visto que o elemento foi selecionado por uma Id exclusiva. Mas assim como no caso anterior também criamos uma variável para selecionar e manipular este elemento.</p>
+        <p>Algo interessante a destacar sobre a seleção do conteúdo de um elemento, é que quando usamos o comando <strong>"window.document.write( )"</strong> podemos escolher se queremos exibir apenas o texto <strong>"window.document.write(t2.innerText)"</strong> ou o texto com a formatação do HTMl <strong>"window.document.write(t2.innerHTMLt)"</strong>. Vamos reescrever novamente esse script, mas dessa vez usando o comando<strong> "window.document.write(t2.innerHTML)"</strong> .</p>
+        
+            <pre>
+                var p2 = window.document.getElementById('t2')
+                window.document.write ('Aqui está o texto selcionado '+ p2.innerHTML)
+            </pre>
+
+        <script>
+            var p2 = window.document.getElementById('t2')
+            window.document.write ('Aqui está o texto selecionado '+ p2.innerHTML)
+        </script>
+        <p>Veja que neste caso, o texto foi exibido com a formatação original, incluido o negrito da fonte.</p>
+
+        <h2>Por nome - "getElementByName"</h2>
+        <p>Como já fica bem evidente pelo subtítulo, este método seleciona o elemento pelo seu<strong> "name"</strong> que tambem deve ser definido para o elemento desejado assim como no caso da seleção por ID. Vejamos isso no script abaixo </p>
+        <p name="msg">TEXTO EXEMPLO 3</p>
+
+        <pre>
+            var d = window.document.getElementsByName('msg')[0]
+            window.document.write('Aqui está o texto ' +d.innerText)
+            d.style.backgroundColor= 'yellow'
+        </pre>
+
+        <script>
+            var d = window.document.getElementsByName('msg')[0]
+            window.document.write('Aqui está o texto ' +d.innerText)
+            d.style.backgroundColor= 'yellow'
+        </script>
+        
+        <h2> Por classe -"getElementByClassName"</h2>
+        <p>Quando queremos selecionar elemesntos que fazem parte de uma mesm classe usamos o <strong>getElementByClassName</strong>.. Confira o script abaixo.</p>
+        <p class="ex4">TEXTO EXEMPLO 4</p>
+
+        <pre>
+            var msg2 =window.document.getElementsByClassName('ex4') [0]
+            window.document.write('Olha ele aqui novamente! '+msg2.innerText)
+
+        </pre>
+
+        <script>
+            var msg2 =window.document.getElementsByClassName('ex4') [0]
+            window.document.write('Olha ele aqui novamente! '+msg2.innerText)
+
+        </script>
+
+        <h2>Por seletor - "getElementsByquerySelector( )" ou "getElementsByquerySelectorAll( )"</h2>
+
+        <p><strong>querySelector</strong> permite selecionar o primeiro elemento que corresponde a um seletor CSS.
+            <strong>querySelectorAll</strong> retorna todos os elementos que correspondem ao seletor CSS especificado.</p>
+        <p>Quando selecionamos um elemnto através do querySelector podemos usar a sintaxe usada em CSS. Neste caso, podemos escolher selcionar por ID ou por Class. bastando definir isso no elemento. Lembrando que a seleção por id é referenciada por uma hashtag (#) e no caso de class por um ponto (.).  Vejamos o script </p>
+        <p id="ex5">TEXTO EXEMPLO </p>
+        <script>
+            var p5 = window.document.getElementsByClassName('ex5')
+            
+
+        </script>
+
+
+
+
+
+
+       
+
+    
+
+
+ 
+        
+      
+        
+</body>
+</html>

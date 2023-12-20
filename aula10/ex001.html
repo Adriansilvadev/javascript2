@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+
+        main {
+            width: 80vh;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+        }
+        div#ret {
+            font-family: Arial, Helvetica, sans-serif ;
+            position: absolute;
+            background-color: rgba(106, 219, 31, 0.843);
+            height: 200px;
+            width: 250px;
+            text-align: center;
+            box-sizing: border-box;
+            line-height: 180px;
+            color: white;
+            font-size: 30px;
+            top: 300px; 
+            left: 200px;          
+        }
+        pre {
+            position: absolute;
+            top: 550px;
+        }
+    </style>
+</head>
+<body> 
+    <main>
+       
+    <h1>Eventos DOM</h1>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Ínicio</a></li>
+                    <li><a href="ex002.html">Página 2</a></li>
+                </ul>
+            </nav>
+        </header>
+    <p>Nesta página temos uma demonstração prática de eventos DOM. Experimente passar o cursor sobre o quadrado abaixo. Clique na área verde e veja outro evento</p>
+
+    <div id="ret" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" >
+        Passe o Cursor
+    </div>
+    <script>
+          var img = window.document.getElementById('ret')
+        function clicar() {
+            img.innerText = 'Clicou'
+            img.style.backgroundColor = 'red'
+        }
+        function entrar() {  
+           img.innerText = 'Entrou'
+           img.style.backgroundColor ='yellow'
+           img.style.color = 'black'
+        }
+        function sair() {
+            img.innerText = 'Saiu'
+            img.style.backgroundColor = ' rgba(106, 219, 31, 0.843)' 
+        }
+         
+    </script>
+        <!--Quando visualizado no navegador, o parágrafo abaixo está acima da div manipulada, por que a div está definida como um elemento de posição absoluta, com deslocamento de 300px do topo e 200 pix da esquerda-->
+    <p>Conforme pode ser verificado no código fonte desta página, os eventos foram disparados diretamente do HTMl, ao lado das atribuições do elemento div que está sendo manipulado. Porém é possivel fazer isso através de outro método, usando  os <strong>"EventListnner"</strong>. veja isso na <a href="ex002.html">Página 2</a>. Abaixo temos o script.</p>
+
+    <pre>
+      
+            var img = window.document.getElementById('ret')
+          function clicar() {
+              img.innerText = 'Clicou'
+              img.style.backgroundColor = 'red'
+          }
+          function entrar() {  
+             img.innerText = 'Entrou'
+             img.style.backgroundColor ='yellow'
+             img.style.color = 'black'
+          }
+          function sair() {
+              img.innerText = 'Saiu'
+              img.style.backgroundColor = ' rgba(106, 219, 31, 0.843)' 
+          }
+           
+      
+        
+    </pre>
+
+    
+</main>
+</body>
+</html>

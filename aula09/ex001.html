@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <head>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">ínicio</a>
+                </li>
+                <li>
+                    <a href="ex002.html">Página 2</a>
+                </li>
+            </ul>
+        </nav>
+    </head>
+<main>
+    <section>
+        <h1> iniciando Estudos com DOM</h1>
+        <h2>o que é DOM?</h2>
+        <p>O <strong>DOM </strong>(Document Object Model) é uma representação estruturada e hierárquica de documentos HTML, XML ou XHTML, que fornece uma interface programática para interagir e manipular o conteúdo, estrutura e estilo de documentos web. Em termos mais simples, o DOM é uma árvore de objetos que representa a estrutura de uma página web, e ele pode ser modificado dinamicamente por meio de scripts (como JavaScript).</p>
+
+        <p>Nesta página vamos considerar como o DOM pode ser usado para interagir e ou manipular os diversos elementos que compoêm uma página web.  
+        </p>
+        <h3>Arvore DOM</h3>
+        <p>A árvore DOM (Document Object Model) é uma representação hierárquica e estruturada de um documento HTML ou XML, organizando seus elementos em uma árvore de nós (nodes). Cada elemento, atributo, texto e outros componentes do documento são representados como nós na árvore, formando uma estrutura que reflete a organização do documento. Vamos explorar alguns conceitos relacionados à árvore DOM:</p>
+        <h4>Nó Raiz</h4>
+        <p> Nó raiz é o ponto de partida da árvore DOM e representa todo o documento. Em HTML, esse nó geralmente corresponde ao elemento <strong>html</strong>.</p>
+
+        <h4>Nós Elemento</h4>
+        <p>Cada tag HTML (por exemplo,<strong> div, p, h1</strong>) é representada por um nó de elemento na árvore DOM. Esses nós podem conter outros nós, formando a hierarquia da árvore.</p>
+
+        <h4>Nós Texto</h4>
+        <p>Os<strong> textos </strong>dentro de elementos HTML (o conteúdo entre as tags) são representados como nós de texto na árvore DOM.</p>
+
+        <h4>Nós Atributo</h4>
+        <p>Os atributos de elementos HTML são representados como nós de atributo na árvore DOM.</p>
+
+        <h4>Relações Pai, Filho e Irmão</h4>
+        <p>  A relação entre nós na árvore é expressa através de conceitos como pai, filho e irmão. <br>
+            <strong>>></strong>Um nó pai contém nós filhos. <br>
+            <strong>>></strong>Um nó filho tem um nó pai. <br>
+            <strong>>></strong>Nós irmãos compartilham o mesmo pai.</p>
+            <p>Aqui está um exemplo de uma Arvore DOM representando um código HTML.  consulte o cógigo fonte para ver a estrutura HTML em forma de comentário</p>
+
+              <!-- 
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <title>Árvore DOM</title>
+                </head>
+                <body>
+                <div>
+                    <h1>Título</h1>
+                    <p>Parágrafo 1</p>
+                    <p>Parágrafo 2</p>
+                </div>
+                </body>
+                </html>  
+            -->
+                <pre>
+                    - Document (nó raiz)
+                      - html
+                        - head
+                          - title
+                            - Texto: "Árvore DOM"
+                        - body
+                          - div
+                            - h1
+                              - Texto: "Título"
+                            - p
+                              - Texto: "Parágrafo 1"
+                            - p
+                              - Texto: "Parágrafo 2"
+                </pre>
+
+                <p>Na pagina seguinte vamos algumas maneiras de selecionar os elementos de uma página usando a estrutura da arvore DOM </p>
+    </section>
+</main>
+
+<footer>
+
+</footer>
+    
+</body>
+</html>

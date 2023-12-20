@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#quad {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            text-align: center;
+            line-height: 200px;            
+        }
+    </style>
+</head>
+<body>
+    <div id="quad" >
+       Passe o  cursor
+    </div>
+
+    <script>
+         var area = window.document.getElementById('quad')
+         var corpo = window.document.getElementsByTagName('body') [0]
+         area.addEventListener('click', clicar)
+         area.addEventListener('mouseenter', entrar)
+         area.addEventListener('mouseout', sair)
+         corpo.addEventListener('click', clicar)
+         
+         function clicar() {
+            area.style.backgroundColor = 'red'
+            area.innerText = 'Clicou'
+           
+            
+         } 
+         function entrar() {
+            area.style.backgroundColor = 'yellow'
+            area.innerText = 'Entrou'
+         } 
+         function sair() {
+            area.style.backgroundColor = 'green'
+            area.innerText= 'Passe o  cursor'
+         }
+
+    </script>
+    
+</body>
+</html>

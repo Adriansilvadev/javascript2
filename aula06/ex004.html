@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tratamento de Dados</title>
+    <style>
+        body {
+            background-color: rgb(11, 149, 149);
+           
+        }
+
+        h1 {
+            color: rgb(6, 88, 6);
+            text-align: center  ;
+        }
+        p{
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <nav>
+            <ul>
+                <li><a href="../aula04/ex001.html">Ínicio</a></li>
+                <li><a href="../aula06/ex002.html" target="_self" rel="next">Página 2</a></li>
+                <li><a href="../aula06/ex003.html" target="_self" rel="next">Página 3</a></li>
+                <li><a href="#">Página4</a></li>
+            </ul>
+        </nav>
+    </head>
+    <h1>Outras aplicações</h1>
+        <p>Podemos fazer outras coisas com strings usando a propriedade<strong> lenght </strong>. Por ser uma propriedade e não um metodo , não requer parenteses ao ser acessado. </p>
+        <h2>s.length</h2>
+        <p>Este atributo é usado para obter ou definir o número de elementos em um array ou o número de caracteres em uma string. 
+            <br> Ex: s.lenght </p>
+
+            <h2>toUpperCase()</h2>
+        <p>
+            A função <strong>toUpperCase()</strong> é útil quando você precisa comparar strings sem se preocupar com a diferença entre maiúsculas e minúsculas ou quando precisa garantir que uma entrada de usuário, por exemplo, esteja em um formato específico.
+            <br> Ex: s.toUpperCase() 
+
+        </p>
+        <h2>toLowerCase()</h2>
+        <p>O método <strong>toLowerCase() </strong>é o contraparte do método <strong>toUpperCase()</strong> em JavaScript. Ele pertence ao objeto String e é utilizado para converter todos os caracteres de uma string para letras minúsculas.
+        <br> Ex: s.toLowerCase() </p>
+
+        <p>Aqui está o script utilizado
+            <pre>
+               
+                    var nome = window.prompt('Qual é seu nome?')
+                    document.write(`Ola<strong> ${nome}</strong>. Seu nome tem ${nome.length} letras.<br/>`)
+                    document.write(`Seu nome em maiúsculas é <strong> ${nome.toUpperCase()}</strong>.<br/>`)
+                    document.write(`Seu nome em minusculas é <strong>${nome.toLowerCase()} </strong>.`)
+               
+            </pre>
+        </p>
+
+        <p>Esta frase aqui em baixo é o resultado do script. Recarregue a página preencha as informações solicitadas e veja o resultado de acordo com os dados fornecidos </p>
+
+
+
+        
+<script>  
+    var nome = window.prompt('Qual é seu nome?')
+    document.write(`Ola<strong> ${nome}</strong>. Seu nome tem ${nome.length} letras.  <br/>`) 
+    document.write(`Seu nome em maiúsculas é <strong> ${nome.toUpperCase()}</strong>. <br/>`)
+    document.write(`Seu nome em minusculas é <strong>${nome.toLowerCase()} </strong>.`)
+</script>
+</body>
+</html>

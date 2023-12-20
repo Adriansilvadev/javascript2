@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tratamento de Dados</title>
+    <style>
+        body {
+            background-color: rgb(11, 149, 149);
+           
+        }
+
+        h1 {
+            color: rgb(6, 88, 6);
+            text-align: center  ;
+        }
+        p{
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <nav>
+            <ul>
+                <li><a href="../aula04/ex001.html">Ínicio</a></li>
+                <li><a href="#" target="_self" rel="next">Página 2</a></li>
+                <li><a href="../aula06/ex003.html" target="_self" rel="next">Página 3</a></li>
+                <li><a href="../aula06/ex004.html">Página4</a></li>
+            </ul>
+        </nav>
+    </head>
+
+    <h1>Tratamento de Dados</h1>
+    <p>Na primeira página você inseriu seu nome, mas ele nào foi para lugar algum. Por isso nesta página fizemos  o tratamento de dados, ou seja, usamos outro comando para exibir o dado coletado com o comando <strong>"window.prompt".</strong> Para isso, primeiro criamos  uma váriável em que será armazenado o valor digitado no campo de nome da caixa de texto gerada pelo comando <strong>"window.prompt".</strong> Em seguida usamos o comando <strong>window.alert</strong> para exibir esta informação. </p>
+    <p>
+        Abaixo temos o script necessário para isso. Veja que a váriável fica dentro do parentese, porem fora da aspas com um simbolo de <strong>+</strong> que chamamos de <strong>concatenação</strong>. Outra coisa é que quando precisamos adicionar outro elemento, tal como uma exclamação precisamos concatenar novamente. Fazemos isso por adicionar o simbolo de <strong>+</strong> e uma aspas. Consulte o Código fonte para uma melhor análise do código. 
+    </p>
+    <p>
+        <pre>
+            var nome = window.prompt("Qual seu nome?")
+            window.alert('Seja bem-vindo, ' + nome +'! ')
+        </pre>
+    </p>
+<script>
+    var nome = window.prompt("Qual seu nome?")
+    window.alert('Seja bem-vindo, ' + nome +'! ')
+   
+</script>
+</body>
+</html>

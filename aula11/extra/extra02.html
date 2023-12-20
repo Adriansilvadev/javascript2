@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+
+    <style>
+        div#cxcond {
+            width: 550px;
+            height: 40px;
+            background-color: aqua;
+            border: 1px solid black;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.422);
+            padding: 7px;
+        }
+
+        input#botao {
+            margin-top: 10px;
+            background-color: orange;
+            border-radius: 5px;
+            font-weight: bolder;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Voluntário</h1>
+    <label for="inome">Nome</label> <input type="text" name="nome" id="inome">
+    <label for="icxnasc">Ano de Nascimento</label><input type="number" name="cxnasc" id="icxnasc"> <br>
+    <input type="button" value="Verificar" id="botao">
+    <div id="cxcond"></div>
+    
+    <script>
+        var cxnome = window.document.getElementById('inome')
+        var cxnasc = window.document.getElementById('icxnas')
+        var botao = window.document.getElementById ('botao')
+        var cxcond = window.document.getElementById('cxcond')
+        botao.addEventListener('click',verificar)
+
+        function verificar() {
+            var nome = cxnome.value
+            var idade = 2023 - Number(icxnasc.value) 
+            var result = idade
+            cxcond.innerHTML =`<strong> Seja bem vindo ${nome} !</strong> Você tem<strong> ${result} anos</strong>.   `
+            if (idade > 18) {
+                 cxcond.innerHTML += ` e <strong>está apto </strong>a realizar qualquer atividade. Procure seu encarregado.`   
+                } else {
+                    if ( idade >=16  && idade <18) {
+                        cxcond.innerHTML += `Você <strong>não pode executar atividades de auto risco</strong>. Procure seu encarregado para mais orientações.`
+                        
+                    } else {
+                        cxcond.innerHTML += `Muito obrigado por sua disposição, mas, por enquanto você não tem idade suficiente para trabalhar. `
+                        
+                    }
+                }
+            
+            
+        }
+
+
+    </script>
+   
+
+    
+</body>
+</html>

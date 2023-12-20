@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro de Voluntário</h1>
+    <p>Preencha suas informações para verificar o tipo de trabalho que pode ser realizado</p>
+    <p><label for="inome">Nome</label> <input type="text" name="nome" id="inome"> </p><br>
+    <p><label for="iidade">Idade</label> <input type="number" name="idade" id="iidade"></p>
+    <input type="button" value="Verificar" onclick="verificar()" > <br>
+    Tipo de Atividade:<div id="area"> </div>
+
+    
+
+    <script>
+        
+        var nome = window.document.getElementById('inome')
+        var idade = window.document.getElementById('iidade')
+        
+
+        
+        function  verificar() {
+            var res = Number( window.document.getElementById('area'))
+            if (res > === 18){
+                 res.innerText ='maior'
+            }
+
+        }
+
+    </script>
+
+    
+</body>
+</html>
