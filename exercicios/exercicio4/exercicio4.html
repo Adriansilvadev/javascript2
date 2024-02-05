@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body , html {
+            background-color: rgb(168, 98, 233);
+            font-family: Arial, Helvetica, sans-serif;
+          
+            font-weight: bold;
+        }
+
+        h1, footer {
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            width: 55vw;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.357);
+            padding: 20px;
+        }
+
+        section > p {
+            margin-left: 15px;
+        }
+         #tab {
+            margin: 10px;
+            height: 80px;
+         }
+         
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div><p>Digite um número para ver a tabuada dele</p>
+        <p>  <label for="num">Número:</label> <input type="number" name="numero" id="num">
+        <input type="button" value="Gerar Tabuada" id="gtab"></p>
+       
+        </div>
+        <div>
+            <select name="tabuada" id="seltab"></select>
+        </div>
+        
+    </section>
+    <footer>
+        <p>&copy;AdriansilvaDev</p>
+    </footer>
+    <script src="script4.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <style>
+        body, html {
+            background-color: rgb(49, 113, 187);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        } 
+
+
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+
+        #principal {
+            height: 200px;
+            width: 500px;
+            background-color: white;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+            font-weight: bolder;
+        }
+        #res {
+           padding-top: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <header> <h1>Vamos Contar</h1></header>
+    
+</body>
+<section>
+    <div id="principal">
+        <p>
+            <label for="inicio">Inicio:</label> <input type="number" name="inicio" id="inicio">
+        </p>
+        <p>
+            <label for="fim">Fim:</label> <input type="number" name="fim" id="fim">
+        </p>
+        <p><label for="passo">Passo:</label> <input type="number" name="passo" id="passo"></p>
+
+        <input type="button" value="Contar" id="btcont">
+       <div id="res">
+        Preparando a contagem...
+    </div>
+    </div>
+    
+</section>
+<footer>
+    &copy;AdriansilvaDev
+</footer>
+
+<script src="script.js"></script>
+
+</html>

@@ -19,7 +19,7 @@ section {
 input#inasc {
     border-radius: 3px;
     background-color: aquamarine;
-    width: 200px;
+    
 }
 input#inasc::placeholder {
     color: rgb(1, 87, 1);
