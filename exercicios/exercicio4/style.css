@@ -1,0 +1,46 @@
+@charset "UTF-8";
+body,html {
+    background-color: white;
+    background-color: rgb(100, 198, 166);
+}
+#corpo {
+    height : 380px;
+    width:290px;
+    background-color: rgb(56, 54, 54);
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#display {
+    height: 55px;
+    width: 250px;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    border-radius: 5px;
+    margin-bottom: 60px;
+}
+
+.botao {
+    height: 50px;
+    width: 50px;
+    margin-right: 14px;
+    border-radius: 5px;
+    background-color: rgb(20, 204, 103);
+}
+
+
+.esq {
+   
+   margin-left: 17px;
+}
+
+footer {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.8em;
+    color: rgb(45, 46, 49);
+}
